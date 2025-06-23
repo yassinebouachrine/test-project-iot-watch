@@ -1,6 +1,6 @@
 # 🌡️ IoT Temp Watch
 
-A full-stack mini project that retrieves real-time temperature data from a public sensor API and displays it on a modern dashboard.
+A full-stack mini project that retrieves real-time temperature data from a public sensor API and displays it on a modern dashboard with AI-powered chat capabilities.
 
 > ⏱ Designed as a 2-day technical challenge for junior or technician-level developers.
 
@@ -12,137 +12,189 @@ Build a small IoT-enabled web app that:
 - Retrieves temperature or humidity data from a public sensor API
 - Stores and exposes the data via a backend service
 - Displays the data in real time or at regular intervals via a frontend interface
-- integrate AI features (LLM, RAG, Model deep learning, ...)
-- IoT
-- Secuirity
-- ...
+- **🤖 NEW: AI-powered chatbot with RAG capabilities for weather data analysis**
+- Implements IoT best practices and security measures
+
+## 🤖 AI Chatbot Feature
+
+### RAG-Powered Weather Analysis
+Intelligent chatbot that analyzes historical temperature data using Retrieval-Augmented Generation:
+
+**Key Capabilities:**
+- Natural language queries about weather patterns
+- Statistical analysis of temperature trends
+- Comparative analysis between time periods
+- Anomaly detection and insights
+
+**Example Queries:**
+- "What was the average temperature last week?"
+- "Were there any temperature anomalies this month?"
+- "Compare January and February temperatures"
+- "Show me the 30-day temperature trend"
+
+**Tech Stack:**
+- **Backend**: Sentence-Transformers embeddings, ChromaDB vector store
+- **LLM**: OpenAI GPT or Hugging Face models
+- **Frontend**: React chat interface with real-time WebSocket
+
+---
 
 ## TODO – Practical Tasks
-This challenge also assesses your hands-on engineering skills through the following tasks:
 
 - Analyze existing code to understand its structure and logic
 - Review a pull request, leaving at least one meaningful comment in English
 - Submit a small technical implementation via a pull request (PR)
 - Create a clear and relevant GitHub Issue, describing a problem or suggesting an improvement
+
 ---
 
 ## ⚙️ Stack Suggestions
 
 ### Backend
-Python (Flask)
-SQLite3 pour la persistance
+- Python (Flask)
+- SQLite3 for persistence
+- **AI**: Sentence-Transformers, ChromaDB, OpenAI/Hugging Face
 
 ### Frontend
-- React (preferred).
+- React (preferred)
+- **Chat UI**: Tailwind CSS, Framer Motion, Socket.IO
 
 ### Optional
 - WebSocket for real-time updates
-- SQLite for persistence
 - Docker/Docker Compose
 - GitHub Actions CI
-- How to Contribute : https://www.youtube.com/embed/yzeVMecydCE
 
 ---
+
 ## 🌐 Data Source
 
 Use one of the following free/public sensor APIs:
 - [Open-Meteo API](https://open-meteo.com/en/docs)
 - [ThingSpeak](https://thingspeak.com/)
 - Any dummy IoT API or mock sensor server
+
 ---
 
-## ✅ What You’ll Be Assessed On
+## ✅ Assessment Criteria
 
-| Category        | Details                                                                 |
-|----------------|-------------------------------------------------------------------------|
-| Figma design    |  propose or improve a design figma
-| 🏗 Project Setup | Proper use of JHipster to scaffold and configure the app               |
-| 🔒 Authentication | Secure login system using JWT and protected API routes                  |
-| 💻 Frontend       | Functional React UI to manage employees with proper state handling     |
-| 📦 API Usage      | Clean and secure usage of RESTful APIs                                 |
-| 🧼 Code Quality   | Maintainable, modular, and readable code                               |
-| 🔁 Git Practices  | Use of Git flow, meaningful commit messages, and clean pull requests   |
+| Category | Details |
+|----------|---------|
+| 🎨 **Figma Design** | Propose or improve a design in Figma |
+| 🏗 **Project Setup** | Proper use of JHipster to scaffold and configure the app |
+| 🔒 **Authentication** | Secure login system using JWT and protected API routes |
+| 💻 **Frontend** | Functional React UI with proper state handling |
+| 🤖 **AI Integration** | RAG chatbot implementation and natural language processing |
+| 📦 **API Usage** | Clean and secure usage of RESTful APIs |
+| 🧼 **Code Quality** | Maintainable, modular, and readable code |
+| 🔁 **Git Practices** | Git flow, meaningful commits, and clean pull requests |
 
 ## Evaluation Criteria
-| Area              | Importance |
-|-------------------|------------|
-| Git usage         | ★★★★☆     |
+| Area | Importance |
+|------|------------|
+| Git usage | ★★★★☆ |
 | Backend functionality | ★★★★☆ |
-| Frontend UX       | ★★★★☆     |
-| Code quality      | ★★★★☆     |
-| Documentation     | ★★★★☆     |
-| Bonus features    | ★★☆☆☆     |
-| IoT               | ★★★★☆     |
+| Frontend UX | ★★★★☆ |
+| **AI/RAG Implementation** | ★★★★☆ |
+| Code quality | ★★★★☆ |
+| Documentation | ★★★★☆ |
+| IoT Integration | ★★★★☆ |
+| Bonus features | ★★☆☆☆ |
 
+---
 
-## Configuration manuelle
+## 🚀 Quick Setup
 
-1. Télécharger Python 3.10 depuis le site officiel :
-     https://www.python.org/downloads/release/python-3109/
- 
- Créer un environnement virtuel Python :
+### Backend Setup
+1. **Python Environment**
    ```bash
    python3.10 -m venv iot-env
+   # Windows: iot-env\Scripts\activate
+   # Linux/Mac: source iot-env/bin/activate
    ```
-Activer l'environnement virtuel :
-   - Windows :
-     ```bash
-     iot-env\Scripts\activate
-     ```
 
-2. ou bien Utiliser conda pour créer un environnement compatible :
- Windows PowerShell
- ```bash
-  wget "https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe" -outfile ".\miniconda.exe"
-  Start-Process -FilePath ".\miniconda.exe" -ArgumentList "/S" -Wait
-  del .\miniconda.exe
- ```
- ```bash
- conda create -n iot-env python=3.10
- conda activate iot-env
- ```
-3. Installer les dépendances Python :
+2. **Install Dependencies**
    ```bash
    cd backend
    pip install -r requirements.txt
    ```
 
-4. Créer un fichier `.env` avec le contenu suivant :
+3. **Environment Variables** (`.env`)
    ```
    PORT=5000
    DATABASE_PATH=temperature.db
    DEBUG=True
+   OPENAI_API_KEY=your_openai_key  # For AI features
    ```
 
-5. Lancer l'application Flask :
+4. **Run Backend**
    ```bash
-   cd backend
    python app.py
    ```
 
-### Configuration du Frontend
-
-1. Depuis le répertoire frontend, installer les dépendances :
+### Frontend Setup
+1. **Install Dependencies**
    ```bash
-   cd ReactApp
+   cd frontend/ReactApp
    npm install
    ```
 
-2. Créer un fichier `.env.local` avec le contenu suivant :
+2. **Environment Variables** (`.env.local`)
    ```
    VITE_API_URL=https://api.open-meteo.com/v1/forecast
    VITE_API_BASE_URL=http://localhost:5000
    ```
 
-3. Lancer le serveur de développement :
+3. **Run Frontend**
    ```bash
-   cd frontend/ReactApp
    npm run dev
    ```
 
-## Points de terminaison de l'API
+---
 
-Le backend fournit les points de terminaison suivants :
+## 📡 API Endpoints
 
-- `/data/latest` – Obtenir la dernière température avec tendance
-- `/data/history` – Obtenir l'historique des températures des dernières heures
+### Weather Data
+- `GET /data/latest` – Get latest temperature with trend
+- `GET /data/history` – Get temperature history
+
+### AI Chatbot
+- `POST /api/chat/message` – Send message to chatbot
+- `GET /api/chat/history` – Get chat history
+- `WebSocket /chat` – Real-time chat connection
+
+---
+
+## 🏗️ Project Structure
+
+```
+iot-temp-watch/
+├── backend/
+│   ├── services/
+│   │   ├── chatbot/
+│   │   │   ├── rag_engine.py      # RAG implementation
+│   │   │   ├── embeddings.py      # Vector embeddings
+│   │   │   └── llm_interface.py   # LLM integration
+│   │   └── weather_fetcher.py
+│   └── app.py
+├── frontend/
+│   └── ReactApp/
+│       ├── components/
+│       │   ├── ChatBot/
+│       │   │   ├── ChatInterface.jsx
+│       │   │   └── MessageBubble.jsx
+│       │   └── Dashboard/
+│       └── hooks/
+└── README.md
+```
+
+---
+
+## 🎯 Getting Started
+
+1. **Fork** this repository
+2. **Clone** your fork locally
+3. Follow the **Quick Setup** instructions
+4. Implement the **TODO tasks**
+5. Submit your **pull request**
+
+Good luck! 🚀
