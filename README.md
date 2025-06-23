@@ -187,14 +187,4 @@ iot-temp-watch/
 └── README.md
 ```
 
----
 
-## 🎯 Getting Started
-
-1. **Fork** this repository
-2. **Clone** your fork locally
-3. Follow the **Quick Setup** instructions
-4. Implement the **TODO tasks**
-5. Submit your **pull request**
-
-Good luck! 🚀
