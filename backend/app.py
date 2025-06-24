@@ -13,7 +13,7 @@ from flask import Flask, jsonify, request, send_from_directory
 from services.weather_fetcher import *
 from models import *
 
-<<<<<<< HEAD
+
 from services.chatbot.chatbot_service import ChatbotService
 
 # Initialiser le service chatbot
@@ -22,8 +22,7 @@ chatbot_service = ChatbotService()
 
 init_db()
 
-=======
->>>>>>> upstream/main
+
 load_dotenv()
 app = Flask(__name__)
 CORS(app)
@@ -36,10 +35,7 @@ last_prediction_time = None
 
 
 # Initialize database
-<<<<<<< HEAD
-=======
 init_db()
->>>>>>> upstream/main
 
 def run_background_services():
     def temperature_updater():
@@ -573,20 +569,6 @@ def serve(path):
     else:
         return send_from_directory(static_dir, 'index.html')
 
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -632,11 +614,6 @@ def get_chat_suggestions():
 
 
 
-
-
-
-=======
->>>>>>> upstream/main
 if __name__ == "__main__":
     run_background_services()
     app.run(host="0.0.0.0", port=5000)
