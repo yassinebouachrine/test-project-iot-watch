@@ -7,9 +7,6 @@
     <list default="true" id="8d1fc667-0e7d-493e-b13c-da28924c48dc" name="Changes" comment="commit init">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/database/temperature.db" beforeDir="false" afterPath="$PROJECT_DIR$/backend/database/temperature.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -166,8 +163,17 @@
       <workItem from="1750720267237" duration="56000" />
       <workItem from="1750720367702" duration="113000" />
       <workItem from="1750720585617" duration="647000" />
-      <workItem from="1750723390375" duration="912000" />
+      <workItem from="1750723390375" duration="1460000" />
     </task>
+    <task id="LOCAL-00001" summary="commit init">
+      <option name="closed" value="true" />
+      <created>1750724503295</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1750724503295</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
