@@ -21,7 +21,6 @@ Build a small IoT-enabled web app that:
 Intelligent chatbot that analyzes historical temperature data using Retrieval-Augmented Generation:
 
 **Key Capabilities:**
-- Natural language queries about weather patterns
 - Statistical analysis of temperature trends
 - Comparative analysis between time periods
 - Anomaly detection and insights
